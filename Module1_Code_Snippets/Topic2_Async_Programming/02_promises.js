@@ -80,7 +80,7 @@ loginUser("Aman")
   .catch(err    => console.log("Something failed:", err));
 
 // ============================================================
-// Promise.all() — Run multiple promises IN PARALLEL
+// Promise.all([s]) — Run multiple promises IN PARALLEL
 // ============================================================
 // Resolves when ALL promises resolve.
 // If ANY one rejects → the whole thing rejects immediately.
@@ -90,10 +90,10 @@ const p1 = new Promise(r => setTimeout(() => r("Data A"), 1000));
 const p2 = new Promise(r => setTimeout(() => r("Data B"), 2000));
 const p3 = new Promise(r => setTimeout(() => r("Data C"), 1500));
 
-Promise.all([p1, p2, p3])
-  .then(results => console.log("All done:", results))
-  // All done: ["Data A", "Data B", "Data C"] after ~2 seconds
-  .catch(err => console.log("One failed:", err));
+// Promise.all([p1, p2, p3])
+//   .then(results => console.log("All done:", results))
+//   // All done: ["Data A", "Data B", "Data C"] after ~2 seconds
+//   .catch(err => console.log("One failed:", err));
 
 // ============================================================
 // Promise.allSettled() — Wait for ALL, even if some fail
