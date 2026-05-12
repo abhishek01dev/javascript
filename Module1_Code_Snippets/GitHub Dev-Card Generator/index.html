@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Dev-Card Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>GitHub Dev-Card Generator</h1>
+        <div class="search-box">
+            <input type="text" id="usernameInput" placeholder="Enter GitHub Username (e.g., abhishek01dev)">
+            <button id="searchBtn">Generate Card</button>
+        </div>
+
+        <div id="loader" class="hidden">Searching...</div>
+        <div id="errorMessage" class="hidden"></div>
+        <div id="cardContainer"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
